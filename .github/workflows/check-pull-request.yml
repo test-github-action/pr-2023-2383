@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   check_date:
-    runs-on: ubuntu22.04
+    runs-on: self-hosted
     steps:
     - run: date +%d.%m.%Y-%H:%M:%S
 
