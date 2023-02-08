@@ -3,13 +3,7 @@ name: check-pull-request
 on: [pull_request]
 
 jobs:
-  check_date:
-    runs-on: self-hosted
-    steps:
-    - run: date +%d.%m.%Y-%H:%M:%S
-
   run:
-    needs: check_date
     runs-on: self-hosted
     steps:
     - id: checkout
