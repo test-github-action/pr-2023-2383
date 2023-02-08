@@ -18,4 +18,4 @@ jobs:
         with:
           github-token: ${{ github.token }}
           repository-name: ${{ github.event.repository.full_name }}
-          update-google-table: ${{ inputs.update_in_google_table }}
+          update-google-table: ${{ github.event.inputs.update_in_google_table }}
