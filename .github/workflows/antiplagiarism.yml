@@ -1,0 +1,17 @@
+name: antiplagiarism
+
+on:
+  schedule:
+      - cron: '0 1 * * 0'
+  workflow_dispatch:
+
+jobs:
+  antiplagiarism:
+    runs-on: self-hosted
+    steps:
+      - id: antiplagiarism
+        name: antiplagiarism
+        uses: test-github-action/pull-request-checker@antiplagiarism
+        with:
+          github-token: ${{ github.token }}
+          repository-name: ${{ github.event.repository.full_name }}
